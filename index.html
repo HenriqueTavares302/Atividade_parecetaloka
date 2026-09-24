@@ -1,0 +1,46 @@
+<!-- A farmacia parecetaloka,
+deseja calcular 
+o total do pedido de 
+seus clientes com base na faixa etária e cartão fidelidade. 
+Crie um sistema que obtenha o nome do cliente, total do pedido, escolha a faixa etária e 
+se o pagamento é por cartão  fidelidade. Assuma que idade<50: sem desconto, 
+idade entre 51 e 70: 5% de desconto, idade>=70:</50:>7% de desconto.
+ Se o cartão fidelidade for selecionado, o cliente terá mais 5% de desconto. -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia Parecetaloka</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Farmácia Parecetaloka</h1>
+        <form action="calcular.php" method="post">
+            <div class="campo">
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="total">Total do Pedido (R$):</label>
+                <input type="number" step="0.01" id="total" name="total" required>
+            </div>
+
+            <div class="campo">
+                <label for="idade">Faixa Etária (Idade):</label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+
+            <div class="campo-check">
+                <input type="checkbox" id="fidelidade" name="fidelidade" value="sim">
+                <label for="fidelidade">Cartão Fidelidade</label>
+            </div>
+
+            <button type="submit">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>
