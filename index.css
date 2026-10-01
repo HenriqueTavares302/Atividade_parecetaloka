@@ -91,3 +91,21 @@ button:hover {
     font-size: 14px;
     color: #059669;
 }
+
+h2 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.lista {
+    list-style: none;
+}
+
+.lista li {
+    padding: 6px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+    color: #334155;
+}

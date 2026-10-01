@@ -38,6 +38,27 @@ $valorFinal = $total - $valorDesconto;
             <p>Desconto total: <?= $descontoTotal ?>% (R$ <?= number_format($valorDesconto, 2, ',', '.') ?>)</p>
             <p class="destaque">Valor a pagar: R$ <?= number_format($valorFinal, 2, ',', '.') ?></p>
         </div>
+
+        <h2>Parcelamento (com for)</h2>
+        <ul class="lista">
+            <?php for ($i = 1; $i <= 6; $i++) { ?>
+                <li><?= $i ?>x de R$ <?= number_format($valorFinal / $i, 2, ',', '.') ?></li>
+            <?php } ?>
+        </ul>
+
+        <h2>Parcelamento (com while)</h2>
+        <ul class="lista">
+            <?php
+            $parcela = 1;
+            while ($parcela <= 6) {
+            ?>
+                <li><?= $parcela ?>x de R$ <?= number_format($valorFinal / $parcela, 2, ',', '.') ?></li>
+            <?php
+                $parcela++;
+            }
+            ?>
+        </ul>
+
         <a class="voltar" href="index.html">Fazer novo cálculo</a>
     </div>
 </body>
